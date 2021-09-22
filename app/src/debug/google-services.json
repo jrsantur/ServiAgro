@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "473048610772",
+    "project_id": "serviagro-e7336",
+    "storage_bucket": "serviagro-e7336.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:473048610772:android:7a244392d61ecf0e24c841",
+        "android_client_info": {
+          "package_name": "pe.juabsa.serviagro"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "473048610772-edk4fqkadft4mnajt91ihmijtv423dvf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAux0wS97URYa_uKdbKJ3AHnvLwC3zE-XY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "473048610772-edk4fqkadft4mnajt91ihmijtv423dvf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
