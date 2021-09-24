@@ -9,6 +9,18 @@
     tools:context="pe.japdesar.serviagro.login.LoginActivity"
     tools:layout_editor_absoluteY="25dp">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#D700A660"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+
+
+
+
+
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
