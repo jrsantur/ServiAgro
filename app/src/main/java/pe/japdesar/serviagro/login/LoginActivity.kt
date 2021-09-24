@@ -82,7 +82,7 @@ class LoginActivity : AppCompatActivity(), ILoginContract.View {
 
     override fun startSignInFlow() {
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-            .requestIdToken(getString(R.string.web_client_id))
+            .requestIdToken(getString(R.string.default_web_client_id))
             .build()
 
         val googleSignInClient = GoogleSignIn.getClient(this, gso)
@@ -117,6 +117,10 @@ class LoginActivity : AppCompatActivity(), ILoginContract.View {
                         null
                     )
                 )
+                Toast.makeText(
+                    this@LoginActivity, "Authentication failed.",
+                    Toast.LENGTH_SHORT
+                ).show()
             }
         }
     }
