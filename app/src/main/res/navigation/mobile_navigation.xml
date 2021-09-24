@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="pe.juabsa.serviagro.main.ui.home.HomeFragment"
+        android:name="pe.japdesar.serviagro.main.ui.home.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/nav_gallery"
-        android:name="pe.juabsa.serviagro.main.ui.gallery.GalleryFragment"
+        android:name="pe.japdesar.serviagro.main.ui.gallery.GalleryFragment"
         android:label="@string/menu_gallery"
         tools:layout="@layout/fragment_gallery" />
 
     <fragment
         android:id="@+id/nav_slideshow"
-        android:name="pe.juabsa.serviagro.main.ui.slideshow.SlideshowFragment"
+        android:name="pe.japdesar.serviagro.main.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
 </navigation>

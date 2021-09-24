@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="pe.juabsa.serviagro">
+    package="pe.japdesar.serviagro">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -12,11 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ServiAgro">
         <activity
-            android:name=".main.MainActivity"
+            android:name="pe.japdesar.serviagro.main.MainActivity"
             android:label="@string/title_activity_main"
             android:theme="@style/Theme.ServiAgro.NoActionBar"></activity>
         <activity
-            android:name=".login.LoginActivity"
+            android:name="pe.japdesar.serviagro.login.LoginActivity"
             android:label="@string/title_activity_login"
             android:theme="@style/Theme.ServiAgro.NoActionBar" >
             <intent-filter>
