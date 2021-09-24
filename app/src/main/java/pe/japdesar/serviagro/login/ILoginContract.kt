@@ -12,6 +12,7 @@ interface ILoginContract {
         fun startSignInFlow()
         fun setObserver(observer: Observer<LoginEvent<LoginResult>>)
         fun startListFeature()
+        abstract fun firebaseAuthWithGoogle(value: LoginEvent.OnGoogleSignInResult<LoginResult>)
     }
 
     interface Logic {
