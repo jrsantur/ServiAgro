@@ -1,18 +1,27 @@
 {
   "project_info": {
     "project_number": "473048610772",
+    "firebase_url": "https://serviagro-e7336-default-rtdb.firebaseio.com",
     "project_id": "serviagro-e7336",
     "storage_bucket": "serviagro-e7336.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:473048610772:android:7a244392d61ecf0e24c841",
+        "mobilesdk_app_id": "1:473048610772:android:bfdc0e833a5d1e1724c841",
         "android_client_info": {
-          "package_name": "pe.juabsa.serviagro"
+          "package_name": "pe.japdesar.serviagro"
         }
       },
       "oauth_client": [
+        {
+          "client_id": "473048610772-c86kso4ckovmokg3h5p816okgkgihulh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "pe.japdesar.serviagro",
+            "certificate_hash": "ace44bd86ce71d8209a2ecd3bb2be0ad11462e60"
+          }
+        },
         {
           "client_id": "473048610772-edk4fqkadft4mnajt91ihmijtv423dvf.apps.googleusercontent.com",
           "client_type": 3
