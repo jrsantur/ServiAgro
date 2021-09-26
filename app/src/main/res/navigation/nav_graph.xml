@@ -5,6 +5,7 @@
     android:id="@+id/nav_graph"
     app:startDestination="@id/FirstFragment">
 
+    <!--
     <fragment
         android:id="@+id/FirstFragment"
         android:name="pe.japdesar.serviagro.login.FirstFragment"
@@ -25,4 +26,5 @@
             android:id="@+id/action_SecondFragment_to_FirstFragment"
             app:destination="@id/FirstFragment" />
     </fragment>
+    -->
 </navigation>

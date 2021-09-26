@@ -5,6 +5,8 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentTransaction
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
@@ -19,12 +21,14 @@ import pe.japdesar.serviagro.R
 import pe.japdesar.serviagro.databinding.ActivityLoginBinding
 import pe.japdesar.serviagro.login.buildlogic.LoginInjector
 import pe.japdesar.serviagro.main.MainActivity
+import pe.japdesar.serviagro.register.RegisterActivity
 
 
 class LoginActivity : AppCompatActivity(), ILoginContract.View {
     override fun setObserver(observer: Observer<LoginEvent<LoginResult>>) = event.observeForever(observer)
 
     override fun startListFeature() = pe.japdesar.serviagro.common.startListFeature(this)
+
 
 
     //var layoutInflater: LayoutInflater = this.GetSystemService(Context.LayoutInflaterService) as LayoutInflater
@@ -44,6 +48,9 @@ class LoginActivity : AppCompatActivity(), ILoginContract.View {
         //btn_auth_attempt.setOnClickListener { event.value = LoginEvent.OnAuthButtonClick }
         //imb_toolbar_back.setOnClickListener { event.value = LoginEvent.OnBackClick }
         binding!!.googleLoginBtn.setOnClickListener { startSignInFlow() }
+
+        binding!!.lblRegister.setOnClickListener { event.value = LoginEvent.OnRegisterButtonClick }
+
     }
 
 
@@ -78,6 +85,11 @@ class LoginActivity : AppCompatActivity(), ILoginContract.View {
         )
          */
 
+    }
+
+    override fun onShowActivityRegister() {
+        val intent  = Intent(this@LoginActivity, RegisterActivity::class.java)
+        startActivity(intent)
     }
 
     override fun startSignInFlow() {

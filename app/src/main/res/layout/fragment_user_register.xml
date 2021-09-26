@@ -5,17 +5,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:padding="16dp"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".register.UserRegisterFragment">
 
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnRegister"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="REGISTRATE AHORA"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginLeft="32dp"
-        app:layout_goneMarginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:background="#D700A660"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 

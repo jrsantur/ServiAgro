@@ -12,6 +12,7 @@ interface ILoginContract {
         fun startSignInFlow()
         fun setObserver(observer: Observer<LoginEvent<LoginResult>>)
         fun startListFeature()
+        fun onShowActivityRegister()
         abstract fun firebaseAuthWithGoogle(value: LoginEvent.OnGoogleSignInResult<LoginResult>)
     }
 
@@ -39,6 +40,7 @@ internal const val RC_SIGN_IN = 1337
 
 sealed class LoginEvent<out T> {
     object OnAuthButtonClick : LoginEvent<Nothing>()
+    object OnRegisterButtonClick : LoginEvent<Nothing>()
     object OnBackClick : LoginEvent<Nothing>()
     object OnStart : LoginEvent<Nothing>()
     data class OnGoogleSignInResult<out LoginResult>(val result: LoginResult) : LoginEvent<LoginResult>()

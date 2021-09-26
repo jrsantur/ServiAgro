@@ -7,6 +7,7 @@ import kotlin.coroutines.CoroutineContext
 import androidx.lifecycle.Observer
 import pe.japdesar.domain.DispatcherProvider
 import pe.japdesar.domain.domainmodel.Result
+import pe.japdesar.domain.error.AgroError
 import pe.japdesar.domain.interactor.AuthSource
 import pe.japdesar.domain.servicelocator.UserServiceLocator
 import pe.japdesar.serviagro.common.BaseLogic
@@ -32,6 +33,7 @@ class LoginLogic(dispatcher: DispatcherProvider,
             is LoginEvent.OnDestroy -> jobTracker.cancel()
             is LoginEvent.OnBackClick -> onBackClick()
             is LoginEvent.OnAuthButtonClick -> onAuthButtonClick()
+            is LoginEvent.OnRegisterButtonClick -> onRegisterButtonClick()
             is LoginEvent.OnGoogleSignInResult -> onSignInResult(event.result)
         }
     }
@@ -71,14 +73,14 @@ class LoginLogic(dispatcher: DispatcherProvider,
     }
 
     private fun handleError(error: Exception) {
-        /*
+
         when (error) {
-            is SpaceNotesError.NetworkUnavailableException -> renderErrorState(
+            is AgroError.NetworkUnavailableException -> renderErrorState(
                 ERROR_NETWORK_UNAVAILABLE
             )
 
             else -> renderErrorState(ERROR_AUTH)
-        }*/
+        }
     }
 
     private suspend fun signUserOut() {
@@ -93,6 +95,10 @@ class LoginLogic(dispatcher: DispatcherProvider,
 
     private fun onBackClick() {
         view.startListFeature()
+    }
+
+    private fun onRegisterButtonClick(){
+        view.onShowActivityRegister()
     }
 
     private fun onStart() = launch {
