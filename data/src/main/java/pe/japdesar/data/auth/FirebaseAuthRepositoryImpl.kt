@@ -45,6 +45,16 @@ class FirebaseAuthRepositoryImpl(val auth: FirebaseAuth = FirebaseAuth.getInstan
         }
     }
 
+    override suspend fun signIn(username: String, passowrd: String): Result<Exception, Boolean> {
+        var saveisSuccessful: Boolean = false
+
+        auth.signInWithEmailAndPassword(username,passowrd)
+            .addOnCompleteListener(){ task ->
+                saveisSuccessful = task.isSuccessful
+            }
+        return Result.build { saveisSuccessful }
+    }
+
     override suspend fun getCurrentUser(): Result<Exception, User?> {
         val firebaseUser = auth.currentUser
 
@@ -57,4 +67,6 @@ class FirebaseAuthRepositoryImpl(val auth: FirebaseAuth = FirebaseAuth.getInstan
             )
         }
     }
+
+
 }

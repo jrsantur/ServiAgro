@@ -45,7 +45,11 @@ class LoginActivity : AppCompatActivity(), ILoginContract.View {
             .get(LoginInjector::class.java)
             .buildLoginLogic(this)
 
-        //btn_auth_attempt.setOnClickListener { event.value = LoginEvent.OnAuthButtonClick }
+        binding!!.btnLgin.setOnClickListener {
+            event.value = LoginEvent.OnAuthButtonClick(
+                binding!!.textInputUsername.editText?.text.toString(),
+                binding!!.textInputPassword.editText?.text.toString())
+        }
         //imb_toolbar_back.setOnClickListener { event.value = LoginEvent.OnBackClick }
         binding!!.googleLoginBtn.setOnClickListener { startSignInFlow() }
 
@@ -101,6 +105,11 @@ class LoginActivity : AppCompatActivity(), ILoginContract.View {
 
         val signInIntent = googleSignInClient.signInIntent
         startActivityForResult(signInIntent, RC_SIGN_IN)
+    }
+
+    override fun startSignInButton(username: String, pass: String) {
+        val intent  = Intent(this@LoginActivity, MainActivity::class.java)
+        startActivity(intent)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

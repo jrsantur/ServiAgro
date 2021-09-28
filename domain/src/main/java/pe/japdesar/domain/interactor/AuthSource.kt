@@ -6,6 +6,10 @@ import pe.japdesar.domain.servicelocator.UserServiceLocator
 
 class AuthSource {
 
+
+    suspend fun loginUser(username:String, pass:String,locator: UserServiceLocator):
+            Result<Exception, Boolean> = locator.authRepository.signIn(username,pass)
+
     suspend fun getCurrentUser(locator: UserServiceLocator):
             Result<Exception, User?> = locator.authRepository.getCurrentUser()
 

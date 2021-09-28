@@ -10,6 +10,7 @@ interface ILoginContract {
         fun showLoopAnimation()
         fun setStatusDrawable(imageURL: String)
         fun startSignInFlow()
+        fun startSignInButton(username: String, pass:String)
         fun setObserver(observer: Observer<LoginEvent<LoginResult>>)
         fun startListFeature()
         fun onShowActivityRegister()
@@ -39,7 +40,7 @@ internal const val ANTENNA_FULL = "antenna_full"
 internal const val RC_SIGN_IN = 1337
 
 sealed class LoginEvent<out T> {
-    object OnAuthButtonClick : LoginEvent<Nothing>()
+    class OnAuthButtonClick(val username:String, val pass:String) : LoginEvent<Nothing>()
     object OnRegisterButtonClick : LoginEvent<Nothing>()
     object OnBackClick : LoginEvent<Nothing>()
     object OnStart : LoginEvent<Nothing>()

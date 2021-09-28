@@ -5,6 +5,8 @@ import pe.japdesar.domain.domainmodel.Result
 
 interface IAuthRepository {
 
+    suspend fun signIn(username:String, passowrd:String): Result<Exception, Boolean>
+
     suspend fun getCurrentUser(): Result<Exception, User?>
 
     suspend fun signOutCurrentUser(): Result<Exception, Unit>

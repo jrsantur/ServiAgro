@@ -32,7 +32,7 @@ class LoginLogic(dispatcher: DispatcherProvider,
             is LoginEvent.OnStart -> onStart()
             is LoginEvent.OnDestroy -> jobTracker.cancel()
             is LoginEvent.OnBackClick -> onBackClick()
-            is LoginEvent.OnAuthButtonClick -> onAuthButtonClick()
+            is LoginEvent.OnAuthButtonClick -> onAuthButtonClick(event.username,event.pass )
             is LoginEvent.OnRegisterButtonClick -> onRegisterButtonClick()
             is LoginEvent.OnGoogleSignInResult -> onSignInResult(event.result)
         }
@@ -56,9 +56,17 @@ class LoginLogic(dispatcher: DispatcherProvider,
         }
     }
 
-    private fun onAuthButtonClick() = launch {
+    private fun onAuthButtonClick(username:String, pass: String) = launch {
         view.showLoopAnimation()
 
+        val authResult = authSource.loginUser(username,pass,userLocator)
+        when (authResult) {
+            is Result.Value -> {
+                if (authResult.value) view.startSignInButton(username,pass)
+            }
+        }
+
+        /*
         val authResult = authSource.getCurrentUser(userLocator)
 
         when (authResult) {
@@ -68,7 +76,7 @@ class LoginLogic(dispatcher: DispatcherProvider,
             }
 
             is Result.Error -> handleError(authResult.error)
-        }
+        }*/
 
     }
 

@@ -8,7 +8,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import pe.japdesar.serviagro.R
-import pe.japdesar.serviagro.databinding.FragmentFirst2Binding
 import pe.japdesar.serviagro.databinding.FragmentUserRegisterBinding
 import pe.japdesar.serviagro.detalles.DetailsActivity
 
