@@ -4,25 +4,54 @@
     tools:showIn="navigation_view">
 
     <group android:checkableBehavior="single">
+
         <item
-            android:id="@+id/nav_home"
+            android:id="@+id/nav_inicio"
             android:icon="@drawable/ic_menu_camera"
-            android:title="@string/menu_home" />
+            android:title="@string/menu_inicio" />
+
+        <item
+            android:id="@+id/nav_actividad"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="@string/menu_actividad" />
+
+
         <item
             android:id="@+id/nav_gallery"
             android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/menu_gallery" />
+            android:title="@string/menu_calendario" />
+
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/nav_proceso_madurez"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_slideshow" />
+            android:title="@string/menu_madurez" />
+
+        <item
+            android:id="@+id/nav_reportes"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_reportes" />
+
     </group>
 
     <group>
         <item
             android:id="@+id/nav_comfig"
             android:icon="@drawable/ic_baseline_settings"
-            android:title="@string/menu_settings" />
+            android:title="@string/menu_settings">
+
+            <menu>
+                <item
+                    android:id="@+id/conf_nav_add_actividad"
+                    android:title="@string/menu_conf_add_actividad"
+                    />
+                <item
+                    android:id="@+id/conf_nav_cintas"
+                    android:title="@string/menu_conf_update_cintas"
+                    />
+            </menu>
+
+        </item>
+
 
     </group>
 

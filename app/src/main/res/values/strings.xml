@@ -20,9 +20,9 @@
 
     <string name="web_client_id">Gn9c4wj5ORWoBp2MduNQexcb</string>
 
-    <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_actividad">Actividades</string>
+    <string name="menu_calendario">Calendarios</string>
+    <string name="menu_madurez">Proceso de madurez</string>
     <string name="menu_settings">Configuracion</string>
 
 
@@ -32,4 +32,8 @@
     <string name="title_activity_details">DetailsActivity</string>
     <!-- Strings used for fragments for navigation -->
     <string name="details_fragment">Configuracion de cultivo</string>
+    <string name="menu_conf_add_actividad">Agregar Actividad</string>
+    <string name="menu_inicio">Inicio</string>
+    <string name="menu_conf_update_cintas">Actualizar cintas</string>
+    <string name="menu_reportes">Reportes</string>
 </resources>
