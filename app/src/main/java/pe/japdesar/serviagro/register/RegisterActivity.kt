@@ -25,7 +25,7 @@ class RegisterActivity : AppCompatActivity() {
 
         val navController = findNavController(R.id.nav_host_fragment_content_register)
         appBarConfiguration = AppBarConfiguration(navController.graph)
-        setupActionBarWithNavController(navController, appBarConfiguration)
+        //setupActionBarWithNavController(navController, appBarConfiguration)
 
     }
 
